@@ -1,0 +1,19 @@
+React lui-même ne manipule pas directement le DOM du navigateur. À la place, React génère un DOM virtuel, 
+distinct du DOM des navigateurs. Au moment venu, il réconcilie ce DOM virtuel avec le DOM du navigateur, 
+en prenant soin de minimiser le nombre d'opérations nécessaires. C’est ce qui nous permet d’avoir de super performances, 
+et d’utiliser React dans de nombreux contextes, et pas seulement au sein du navigateur même, typiquement les applications mobiles natives, etc.
+
+
+
+les hook :
+
+Un hook est une fonction qui permet de « se brancher » (to hook up) sur des fonctionnalités React.
+
+useState:   est un hook qui permet d’ajouter le state local React à des composants fonctions.
+
+
+useEffect permet d'effectuer des effets : cela permet à notre composant d'exécuter des actions après l'affichage, 
+en choisissant à quel moment cette action doit être exécutée.
+
+Le hook  useEffect   est appelé après chaque rendu de votre composant. Il est possible de préciser quelle modification de donnée déclenche les effets exécutés dans useEffect, avec le tableau de dépendances.
+Un tableau de dépendances vide permet d'exécuter un effet uniquement au premier rendu de votre composant.
