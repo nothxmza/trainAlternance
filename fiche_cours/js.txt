@@ -1,0 +1,59 @@
+objet : Un Object (objet, en français) JavaScript est un conteneur.
+		Il est composé de propriétés qui ont chacune une valeur. 
+		Ainsi, le type de donnée Object offre la possibilité de stocker
+		plusieurs valeurs en une seule fois, plutôt que de devoir stocker 
+		séparément nos valeurs dans plusieurs variables différentes.
+exemple:
+		let monPersonnage = {
+		nom: "Wayne",
+		prenom: "Bruce",
+		age: 35,
+		couleurPreferee: "noir",
+		hobbies: "sortir la nuit"
+		}
+ajouter un element: monPersonnage.voiture = "voiture"
+
+
+tableau:
+copier un tableau par valeur et nn par reference grace au spread operator
+let variableComplexe3 = [...variableComplexe1];
+
+const array1 = ['a', 'b', 'c'];
+
+parcourire et cree un nv tab avec map exemple :  plantList.map(plant => plant.name);
+
+filtre avec filter : plantList.filter((plant) => plant.water === 10)
+
+on peu filre et cree un nv tableau : plantList.filter((plant) => plant.water === 10).map(plant => plant.name)
+
+entries permet de faire un objet key/value const iterator1 = array1.entries();
+
+every permet de verifier si tous les elements d'un tableau repond a une condition 
+	
+	const isBelowThreshold = (currentValue) => currentValue < 40;
+	const array1 = [1, 30, 39, 29, 10, 13];
+
+	console.log(array1.every(isBelowThreshold)); 
+
+
+fill permet de changr un element par une valeur static
+fill(0,2,4)
+remplace du 2 au 4 par des 0
+const arr = new Array(3);
+for (let i = 0; i < arr.length; i++) {
+  arr[i] = new Array(4).fill(1); // Creating an array of size 4 and filled of 1
+} 
+
+
+
+
+stringify: convertit une valeur JavaScript en chaîne JSON. 
+parse : analyse une chaîne de caractères JSON et construit la valeur JavaScript ou l'objet décrit par cette chaîne
+
+
+preventDefault: permet de ne pas effectuer laction par defaut
+
+stopPropagation: Son rôle est par contre très différent, car il nous permet d'empêcher la propagation de l'événement vers son parent
+
+JavaScript ne lit pas une page HTML comme du simple texte. Il la représente comme une structure organisée en parents/enfants, 
+et composée de nœuds qui représentent des balises.
