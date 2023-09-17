@@ -17,3 +17,61 @@ en choisissant à quel moment cette action doit être exécutée.
 
 Le hook  useEffect   est appelé après chaque rendu de votre composant. Il est possible de préciser quelle modification de donnée déclenche les effets exécutés dans useEffect, avec le tableau de dépendances.
 Un tableau de dépendances vide permet d'exécuter un effet uniquement au premier rendu de votre composant.
+
+
+outlets : pour afficher certaine partie de la page
+
+Contexte : Contexte est un moyen de partager simplement les props entre les composants. Contexte est natif à React et ne nécessite pas d'installer quoi que ce soit de plus.
+
+useContext  est un hook qui permet de se “brancher” depuis un composant enfant qui a été wrappé par un Provider  , et donc d’accéder simplement au state partagé.
+
+useContext:
+
+etape 1 cree le context:
+
+l'initialiser exemple : export const ThemeContext = createContext()
+pour pourvoir recupere le theme par exemple dans un composant enfant nous allon appeller ThemeContext exemple: const { toggleTheme, theme } = useContext(ThemeContext)
+
+etape 2 cree le provider (fournisseur):
+
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState('light')
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  )
+}
+
+On a bien créé un composant qui nous permet de wrapper notre composant parent avec notre Provider  de thème. 
+Le state de theme  et sa fonction pour le modifier, setTheme  , sont passés dans les values  . 
+Ainsi, tous les composants enfants qui se retrouvent englobés par le Provider  vont pouvoir accéder à theme  et setTheme  .
+
+etape 3 donner l'acces au context:
+
+exemple:
+ReactDOM.render(
+  <React.StrictMode>
+    <Router>
+      <ThemeProvider>
+        <GlobalStyle />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+        <Footer />
+      </ThemeProvider>
+    </Router>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+on place notre provider le plus haut possible pour que les composant y on acces
+
+
+exemple variable pas def const users = data?.user
