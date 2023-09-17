@@ -26,6 +26,15 @@ filtre avec filter : plantList.filter((plant) => plant.water === 10)
 
 on peu filre et cree un nv tableau : plantList.filter((plant) => plant.water === 10).map(plant => plant.name)
 
+exemple pour reduce let tab = [];
+	const cate = plantList.reduce((acc,plant) => {
+		if(tab.includes(plant.category)) {
+			return acc
+		} else {
+			tab.push(plant.category)
+		}
+	})
+
 entries permet de faire un objet key/value const iterator1 = array1.entries();
 
 every permet de verifier si tous les elements d'un tableau repond a une condition 
@@ -57,3 +66,6 @@ stopPropagation: Son rôle est par contre très différent, car il nous permet d
 
 JavaScript ne lit pas une page HTML comme du simple texte. Il la représente comme une structure organisée en parents/enfants, 
 et composée de nœuds qui représentent des balises.
+
+
+onChange={(e) => updateInputValue(e.target.value)}

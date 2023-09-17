@@ -1,0 +1,31 @@
+balise:
+
+abbr : représente une abréviation ou un acronyme on peu ajouter du css sur le mot 
+exemple :
+ You can use <abbr>CSS</abbr> 
+ abbr {
+	font-style: italic;
+	color: chocolate;
+  }
+  
+address : L'élément HTML <address> indique des informations de contact pour une personne, un groupe de personnes ou une organisation.
+
+area :L'élément HTML <area> définit une zone particulière d'une image et peut lui associer un lien hypertexte. Cet élément n'est utilisé qu'au sein d'un élément <map>.
+
+aside:L'élément <aside> (en français, « aparté ») représente une partie d'un document dont le contenu n'a qu'un rapport indirect avec le contenu principal du document. Les apartés sont fréquemment présents sous la forme d'encadrés ou de boîtes de légende.
+
+dataList : permet de faire une liste avec plusieurs option qui correspondents aux differents choix
+
+details: L'élément HTML <details> est utilisé comme un outil permettant de révéler une information. Un résumé ou un intitulé peuvent être fournis grâce à un élément <summary>.
+
+kbd : L'élément HTML <kbd> représente une plage de texte en ligne indiquant la saisie de texte par l'utilisateur à partir d'un clavier, d'une saisie vocale ou de tout autre dispositif de saisie de texte. Par convention, le user agent rend par défaut le contenu d'un élément <kbd> en utilisant sa police monospace, bien que cela ne soit pas requis par le standard HTML.
+
+object : L'élément HTML <object> représente une ressource externe qui peut être interprétée comme une image, un contexte de navigation imbriqué ou une ressource à traiter comme un plugin. exemple pour mettre un pdf
+
+optgroup : permet de cree plusieurs group dans le select
+
+sub : L'élément HTML <sub> est utilisé, pour des raisons typographiques, afin d'afficher du texte en indice (sous la ligne de base et généralement plus petit) par rapport au bloc de texte environnant. exemple:  C8H10N4O2,
+
+summary: L'élément HTML <summary> représente une boîte permettant de révéler le contenu d'un résumé ou d'une légende pour le contenu d'un élément <details>. En cliquant sur l'élément <summary>, on passe de l'état affiché à l'état masqué (et vice versa) de l'élément <details> parent.
+
+sup : pour afficher en exposant
